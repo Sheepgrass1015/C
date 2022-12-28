@@ -1,0 +1,11 @@
+create		PASS 1 1
+get/set random	PASS 1 2
+get/set last	PASS 1 3
+inflate size	PASS 1 4
+inflate content	PASS 1 5
+inflate memory	PASS 1 6
+clone size	PASS 1 7
+clone content	PASS 1 8
+clone memory	PASS 1 9
+free		PASS 1 10
+10

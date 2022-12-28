@@ -1,0 +1,21 @@
+create 1	PASS 1 1
+create 2	PASS 1 2
+append empty	PASS 1 3
+append normal	PASS 1 4
+insert normal	PASS 1 5
+insert empty	PASS 1 6
+size		PASS 1 7
+get/set first	PASS 1 8
+get/set random	PASS 1 9
+get/set last	PASS 1 10
+find random	PASS 1 11
+find first	PASS 1 12
+find last	PASS 1 13
+find not in 1	PASS 1 14
+find not in 2	PASS 1 15
+remove random	PASS 1 16
+remove last	PASS 1 17
+remove first	PASS 1 18
+iterate		PASS 1 19
+free		PASS 1 20
+20
