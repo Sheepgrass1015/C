@@ -59,11 +59,12 @@ int list_length(List *plist){
 //append_tail**change
 void list_append_tail(List *plist,int x){
     Node *n=list_create_node(x);
-    plist->tail->next=n->next;
-    plist->tail=n;
     if(plist->tail==NULL){//如果是空链表
         plist->head=n;
+        return;
     }
+    plist->tail->next=n->next;
+    plist->tail=n;
 }
 //insert_at
 void list_insert_at(List *plist,int idx,int x){
