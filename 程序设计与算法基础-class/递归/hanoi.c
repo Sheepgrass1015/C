@@ -1,11 +1,13 @@
 #include <stdio.h>
 static int cnt=0;
+int step(int num);
 void hanoi(int n,char source,char target,char aux);
 int main(){
     int n;
     char a,b,c;
     scanf("%d %c %c %c",&n,&a,&b,&c);
     hanoi(n,a,b,c);
+    printf("共移动 %d 步\n",step(n));
     }
 void hanoi(int n,char source,char target,char aux){
     if(n>0){
@@ -19,3 +21,10 @@ void hanoi(int n,char source,char target,char aux){
 就只要考虑第n个的实现——把前n-1个移动到中间柱上，然后把第n个移动到目标柱上，
 最后把前n-1个移动到目标柱上，这样n个圆盘的移动就完成了
 */
+int step(int num){
+    if(num==1){
+        return 1;
+    }else{
+        return 1+2*step(num-1);
+    }
+}

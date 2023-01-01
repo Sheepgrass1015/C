@@ -1,14 +1,11 @@
 #include <stdio.h>
-#include <math.h>
 
 int main(){
-    float a,b,c;
-    a=1.345f;
-    b=1.123f;
-    c=a+b;
-    if(fabs(c-2.468)<1e-12){
-        printf("相等\n");
-    }else{
-        printf("不相等\n");
+    int number;
+    scanf("%d",&number);
+    unsigned mask=1u<<31;//1u说明mask是unsigned类型，否则移位结果不同
+    for(;mask;mask>>=1){
+        printf("%d",number&mask? 1:0);
     }
+    printf("\n");
 }
