@@ -65,7 +65,7 @@ void swap(int *a,int *b){
 int lomuto(int a[],int lo,int hi){
     int p=slect_pivot(a,hi,lo);
     if(p!=hi){
-        swap(&a[p],&a[hi]);
+        swap(&a[p],&a[hi]);//这个时候我们保证pivot处在hi的位置，然后只要进行常规操作就可以了
     }
     int i=lo;
     int j=lo;
